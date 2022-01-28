@@ -1,2 +1,5 @@
 [prometheus_server]
 prometheus
+
+[node_exporter]
+prometheus

@@ -1,0 +1,6 @@
+---
+- hosts: node_exporter
+  roles:
+    - node_exporter
+  remote_user: root
+
