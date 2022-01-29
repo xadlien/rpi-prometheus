@@ -12,3 +12,8 @@ To install node exporter run that playbook after editing the node_exporter group
 ```
 ansible-playbook -i ansible_hosts playbooks/node_exporter.yml
 ```
+## Usage Grafana Agent 
+Grafana Agent works the same way as node exporter. Update the corresponding values and then run this ansible.  
+```
+ansible-playbook -i ansible_hosts playbooks/grafana_agent.yml
+```

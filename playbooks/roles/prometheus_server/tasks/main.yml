@@ -38,6 +38,13 @@
   tags:
   - install
 
+- name: Copy configuration file
+  template:
+    src: prometheus.yml.j2
+    dest: /opt/prometheus/prometheus.yml
+  tags:
+  - install
+
 - name: Copy Unit File
   copy:
     src: prometheus.service
