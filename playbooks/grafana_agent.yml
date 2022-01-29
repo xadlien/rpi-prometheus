@@ -1,6 +1,0 @@
----
-- hosts: grafana_agent
-  roles:
-    - grafana_agent
-  remote_user: root
-

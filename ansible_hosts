@@ -1,9 +1,6 @@
 [prometheus_server]
-prometheus
+prometheus.martin.lan
 
 [node_exporter]
-mordor
-darryl
-
-[grafana_agent:children]
-node_exporter
+mordor.martin.lan
+darryl.martin.lan
