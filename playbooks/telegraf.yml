@@ -1,0 +1,6 @@
+---
+- hosts: prometheus_server
+  roles:
+    - prometheus_server
+  remote_user: root
+

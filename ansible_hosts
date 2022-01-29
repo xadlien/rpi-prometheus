@@ -3,3 +3,6 @@ prometheus
 
 [node_exporter]
 prometheus
+
+[grafana_agent:children]
+node_exporter

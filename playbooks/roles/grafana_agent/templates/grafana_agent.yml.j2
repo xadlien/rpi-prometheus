@@ -1,0 +1,28 @@
+server:
+  http_listen_port: 12345
+
+metrics:
+  global:
+    scrape_interval: 15s
+  configs:
+    - name: agent
+      scrape_configs:
+        - job_name: self-scrape
+          static_configs:
+            - targets: ['localhost:12345']
+              labels:
+                server: "{{ inventory_hostname}}"
+        - job_name: node_exporter
+          static_configs:
+            - targets: ['localhost:9000']
+              labels:
+                server: "{{ inventory_hostname }}"
+      remote_write:
+        - url: http://prometheus.martin.lan:9090/api/prom/push
+  wal_directory: /tmp/grafana_agent_wal
+
+integrations:
+  agent:
+    enabled: true
+  node_exporter:
+    enabled: true

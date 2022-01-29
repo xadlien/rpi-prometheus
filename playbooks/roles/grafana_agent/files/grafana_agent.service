@@ -1,0 +1,10 @@
+[Unit]
+Description=Grafana Agent
+
+[Service]
+User=grafana_agent
+Restart=on-failure
+ExecStart=/opt/grafana_agent/agent-linux-armv7 -config.file /opt/grafana_agent/grafana_agent.yml
+
+[Install]
+WantedBy=multi-user.target
